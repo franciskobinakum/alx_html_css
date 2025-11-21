@@ -1,24 +1,90 @@
-/* Base Flexbox Layout Settings */
+/* --- Visual styling (non-positioning) --- */
 
+/* Typography */
 body {
-    display: flex;
-    flex-direction: column; /* header, main, footer stacked vertically */
-    height: 100vh;
-    margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #222;
+  background: linear-gradient(180deg, #ffffff 0%, #f6f8fb 100%);
 }
 
-main {
-    display: flex;
-    flex-direction: row; /* article and aside side-by-side */
-    flex: auto;          /* main expands to fill available space */
+/* Header look */
+header {
+  background: #0b4f6c;
+  color: #fff;
+  padding: 1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(11,79,108,0.15);
 }
 
+/* Nav list inline styling */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Logo styling (unicode or img inside li.logo) */
+header nav ul li.logo {
+  font-size: 1.6rem; /* bigger for unicode char */
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+header nav ul li.logo img {
+  display: block;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+/* Link styles */
+header nav a {
+  color: #e6f2f6;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+header nav a:hover,
+header nav a:focus {
+  background: rgba(255,255,255,0.06);
+  outline: none;
+}
+
+/* Article styling — you are allowed to fully style inside article */
 article {
-    flex: 2;             /* 2/3 width */
-    overflow-y: auto;    /* scroll inside article */
+  padding: 1.25rem;
+  background: #ffffff;
+  border-right: 1px solid rgba(0,0,0,0.05);
 }
 
+/* Aside styling */
 aside {
-    flex: 1;             /* 1/3 width */
-    overflow-y: auto;    /* scroll inside aside */
+  padding: 1rem;
+  background: linear-gradient(180deg,#fbfdff,#f3f7fb);
+  border-left: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Footer styling */
+footer {
+  padding: 0.75rem 1rem;
+  background: #072f3b;
+  color: #cfeff6;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+/* Make images responsive inside article */
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.75rem 0;
+}
+
+/* Small accessibility tweak for focus */
+a:focus {
+  outline: 3px solid #ffdf7e;
+  outline-offset: 2px;
 }

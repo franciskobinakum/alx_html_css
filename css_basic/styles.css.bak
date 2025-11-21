@@ -1,0 +1,24 @@
+/* Base Flexbox Layout Settings */
+
+body {
+    display: flex;
+    flex-direction: column; /* header, main, footer stacked vertically */
+    height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row; /* article and aside side-by-side */
+    flex: auto;          /* main expands to fill available space */
+}
+
+article {
+    flex: 2;             /* 2/3 width */
+    overflow-y: auto;    /* scroll inside article */
+}
+
+aside {
+    flex: 1;             /* 1/3 width */
+    overflow-y: auto;    /* scroll inside aside */
+}

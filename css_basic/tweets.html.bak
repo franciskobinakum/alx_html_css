@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Tweets</title>
+  <link href="base.css" rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+<head>
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+
+    <link href="base.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+</head>
+<body>
+
+  <header>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tweets.html">Tweets</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <article>
+      <h1>My Tweets</h1>
+      <p>Below is an embedded tweet. If it doesn't render immediately, ensure you are online.</p>
+
+      <!-- Embedded Tweet (example) -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Just setting up my twttr</p>&mdash; Jack (@jack)
+        <a href="https://twitter.com/jack/status/20">March 21, 2006</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+      <p><a href="index.html">Back to Home</a></p>
+    </article>
+
+    <aside>
+      <p>placeholder to add comment thread later</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>Made by Francis Kobina Kum - <a href="https://github.com/franciskobinakum" target="_blank" rel="noopener noreferrer">here</a></p> 
+  </footer>
+
+</body>
+</html>
