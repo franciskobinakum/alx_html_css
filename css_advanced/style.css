@@ -393,3 +393,95 @@ nav a:focus {
   .membership-grid { grid-template-columns: 1fr; }
   .membership-illustration { display: none; } /* hide illustration on small screens */
 }
+/* === FAQ Section === */
+.faq-section {
+  padding: 2rem 1.25rem;
+  background: linear-gradient(180deg,#fff,#fbfdff);
+  display: grid;
+  grid-template-columns: 1fr 320px; /* main FAQ column + optional illustration */
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Make the layout collapse cleanly on small screens */
+@media (max-width: 900px) {
+  .faq-section { grid-template-columns: 1fr; }
+  .faq-illustration { display: none; } /* hide illustration on small screens */
+}
+
+/* FAQ list container */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Individual FAQ item */
+.faq-item {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  box-shadow: 0 8px 20px rgba(12,40,60,0.04);
+  border: 1px solid rgba(0,0,0,0.03);
+  overflow: hidden;
+}
+
+/* summary (question) styling */
+.faq-question {
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+/* small link inside question (e.g., (More)/Register) */
+.faq-link {
+  font-weight: 600;
+  color: var(--primary-accent, #ff7a59);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+}
+
+/* When summary is focused (keyboard) */
+.faq-item summary:focus {
+  outline: 3px solid #ffdf7e;
+  outline-offset: 3px;
+  border-radius: 8px;
+}
+
+/* answer area */
+.faq-answer {
+  margin-top: 0.65rem;
+  color: var(--muted, #6b7a86);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+/* Fancy marker: rotate arrow when open */
+.faq-item summary::-webkit-details-marker { display: none; } /* hide default marker */
+.faq-item summary::after {
+  content: "▾";
+  font-size: 1rem;
+  color: var(--muted, #6b7a86);
+  transition: transform 0.18s ease;
+  margin-left: 0.5rem;
+}
+.faq-item[open] summary::after {
+  transform: rotate(-180deg);
+}
+
+/* Optional right-side illustration */
+.faq-illustration { display:flex; align-items:center; justify-content:center; }
+.faq-illustration img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(12,40,60,0.06);
+}
