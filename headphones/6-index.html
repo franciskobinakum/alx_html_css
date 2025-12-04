@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Headphones — Our results (CSS pentagons)</title>
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="6-styles.css" />
+</head>
+<body>
+  <!-- HEADER (same as before) -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="6-index.html" aria-label="Headphones Home">
+        <img src="images/logo_headphones.png" alt="Headphones logo" class="logo">
+      </a>
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#our-results">Our results</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#buy">Buy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (kept simple for context) -->
+  <main id="main" role="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">New release</p>
+          <h1 id="hero-title">Immersive sound. Sleek design.</h1>
+          <p class="lead">Experience music exactly as the artist intended — deep bass, crystal highs, and a battery that keeps you playing all day.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#buy">Buy Now</a>
+            <a class="btn btn-ghost" href="#learn">Learn More</a>
+          </div>
+        </div>
+
+        <div class="hero-media" aria-hidden="true">
+          <img src="images/headphones_hero_1.jpg" alt="" class="hero-image hero-desktop">
+          <img src="images/headphones_hero_2.jpg" alt="" class="hero-image hero-mobile">
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO (unchanged) -->
+    <section id="what-we-do" class="what-we-do container" aria-labelledby="what-we-do-title">
+      <h2 id="what-we-do-title" class="section-title">What we do</h2>
+      <p class="section-intro">We design immersive audio experiences for all listeners. From studio-grade sound to everyday comfort — crafted with care and engineered for performance.</p>
+
+      <div class="what-grid">
+        <article class="what-card">
+          <div class="what-icon" aria-hidden="true">
+            <div class="pentagon small" aria-hidden="true"></div>
+          </div>
+          <div>
+            <h3 class="what-title">Studio Quality</h3>
+            <p class="what-desc">Precise sound tuning and large drivers for clear highs and tight bass.</p>
+          </div>
+        </article>
+
+        <article class="what-card">
+          <div class="what-icon" aria-hidden="true">
+            <div class="pentagon small" aria-hidden="true"></div>
+          </div>
+          <div>
+            <h3 class="what-title">Long Battery</h3>
+            <p class="what-desc">All-day battery life to keep you connected through work and play.</p>
+          </div>
+        </article>
+
+        <article class="what-card">
+          <div class="what-icon" aria-hidden="true">
+            <div class="pentagon small" aria-hidden="true"></div>
+          </div>
+          <div>
+            <h3 class="what-title">Elegant Design</h3>
+            <p class="what-desc">Modern materials and comfort-first design for long listening sessions.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OUR RESULTS (pentagons drawn with CSS) -->
+    <section id="our-results" class="our-results container" aria-labelledby="our-results-title">
+      <h2 id="our-results-title" class="section-title">Our results</h2>
+      <p class="section-intro">We measure what matters — reliability, satisfaction, and reach. These numbers tell our story.</p>
+
+      <div class="results-grid" role="list">
+        <article class="result-card" role="listitem" aria-labelledby="res-1">
+          <div class="result-icon" aria-hidden="true">
+            <div class="pentagon" aria-hidden="true"></div>
+          </div>
+          <div class="result-body">
+            <div id="res-1" class="result-number">1,200+</div>
+            <div class="result-label">Products sold</div>
+          </div>
+        </article>
+
+        <article class="result-card" role="listitem" aria-labelledby="res-2">
+          <div class="result-icon" aria-hidden="true">
+            <div class="pentagon" aria-hidden="true"></div>
+          </div>
+          <div class="result-body">
+            <div id="res-2" class="result-number">98%</div>
+            <div class="result-label">Customer satisfaction</div>
+          </div>
+        </article>
+
+        <article class="result-card" role="listitem" aria-labelledby="res-3">
+          <div class="result-icon" aria-hidden="true">
+            <div class="pentagon" aria-hidden="true"></div>
+          </div>
+          <div class="result-body">
+            <div id="res-3" class="result-number">48h</div>
+            <div class="result-label">Max battery life</div>
+          </div>
+        </article>
+
+        <article class="result-card" role="listitem" aria-labelledby="res-4">
+          <div class="result-icon" aria-hidden="true">
+            <div class="pentagon" aria-hidden="true"></div>
+          </div>
+          <div class="result-body">
+            <div id="res-4" class="result-number">35+</div>
+            <div class="result-label">Countries available</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT (kept simple) -->
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="section-title">Contact us</h2>
+      <p class="section-intro">Have a question about our products or want to work with us? Fill the short form and we’ll get back to you within 48 hours.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p class="muted">Prefer email? Send us a message or use the form — we reply within 2 business days.</p>
+
+          <ul class="contact-list">
+            <li><strong>Email:</strong> <a href="mailto:contact@headphones.example.com">contact@headphones.example.com</a></li>
+            <li><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><strong>Address:</strong> 123 Sound Ave, Music City</li>
+          </ul>
+
+          <div class="contact-cta">
+            <a class="btn btn-primary" href="mailto:contact@headphones.example.com">Email Us</a>
+            <a class="btn btn-ghost" href="#buy">Shop Now</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" action="#" method="post" novalidate>
+            <label for="name" class="sr-only">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Full name" required minlength="2" />
+
+            <label for="email" class="sr-only">Email address</label>
+            <input id="email" name="email" type="email" placeholder="Email address" required />
+
+            <label for="subject" class="sr-only">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Subject" required minlength="3" />
+
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Message" required minlength="10"></textarea>
+
+            <div class="form-row form-row-inline">
+              <input id="subscribe" name="subscribe" type="checkbox" />
+              <label for="subscribe">Subscribe to newsletter</label>
+            </div>
+
+            <div class="form-row">
+              <button type="submit" class="btn btn-primary">Send message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-col footer-brand">
+        <a href="6-index.html" aria-label="Headphones Home">
+          <img src="images/logo_headphones.png" alt="Headphones logo" class="footer-logo">
+        </a>
+        <p class="footer-copy">Designed for music lovers. Built with care.</p>
+      </div>
+
+      <div class="footer-col footer-links" aria-label="Footer navigation">
+        <h4 class="footer-title">Explore</h4>
+        <ul>
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#our-results">Our results</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#buy">Buy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-contact" aria-label="Contact details">
+        <h4 class="footer-title">Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@headphones.example.com">contact@headphones.example.com</a></li>
+          <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+          <li>123 Sound Ave, Music City</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-social" aria-label="Follow us">
+        <h4 class="footer-title">Follow</h4>
+        <div class="social-list">
+          <a href="#" class="social-link" aria-label="Follow on Twitter">Twitter</a>
+          <a href="#" class="social-link" aria-label="Follow on Instagram">Instagram</a>
+          <a href="#" class="social-link" aria-label="Follow on Facebook">Facebook</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="small">&copy; 2024 Nana Francis Kobina Kum — All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
