@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Headphones — Our results (CSS pentagons)</title>
+  <title>Headphones — Animated UI (What we do / Our results)</title>
 
   <link rel="icon" href="images/favicon.ico" />
-  <link rel="stylesheet" href="6-styles.css" />
+  <link rel="stylesheet" href="7-styles.css" />
 </head>
 <body>
-  <!-- HEADER (same as before) -->
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a class="brand" href="6-index.html" aria-label="Headphones Home">
+      <a class="brand" href="7-index.html" aria-label="Headphones Home">
         <img src="images/logo_headphones.png" alt="Headphones logo" class="logo">
       </a>
       <nav class="main-nav" role="navigation" aria-label="Main Navigation">
@@ -26,7 +26,7 @@
     </div>
   </header>
 
-  <!-- HERO (kept simple for context) -->
+  <!-- MAIN / HERO -->
   <main id="main" role="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
@@ -47,13 +47,13 @@
       </div>
     </section>
 
-    <!-- WHAT WE DO (unchanged) -->
+    <!-- WHAT WE DO -->
     <section id="what-we-do" class="what-we-do container" aria-labelledby="what-we-do-title">
       <h2 id="what-we-do-title" class="section-title">What we do</h2>
       <p class="section-intro">We design immersive audio experiences for all listeners. From studio-grade sound to everyday comfort — crafted with care and engineered for performance.</p>
 
       <div class="what-grid">
-        <article class="what-card">
+        <article class="what-card animated-item float-slow" tabindex="0">
           <div class="what-icon" aria-hidden="true">
             <div class="pentagon small" aria-hidden="true"></div>
           </div>
@@ -63,7 +63,7 @@
           </div>
         </article>
 
-        <article class="what-card">
+        <article class="what-card animated-item float-slow" tabindex="0">
           <div class="what-icon" aria-hidden="true">
             <div class="pentagon small" aria-hidden="true"></div>
           </div>
@@ -73,7 +73,7 @@
           </div>
         </article>
 
-        <article class="what-card">
+        <article class="what-card animated-item float-slow" tabindex="0">
           <div class="what-icon" aria-hidden="true">
             <div class="pentagon small" aria-hidden="true"></div>
           </div>
@@ -85,13 +85,13 @@
       </div>
     </section>
 
-    <!-- OUR RESULTS (pentagons drawn with CSS) -->
+    <!-- OUR RESULTS -->
     <section id="our-results" class="our-results container" aria-labelledby="our-results-title">
       <h2 id="our-results-title" class="section-title">Our results</h2>
       <p class="section-intro">We measure what matters — reliability, satisfaction, and reach. These numbers tell our story.</p>
 
-      <div class="results-grid" role="list">
-        <article class="result-card" role="listitem" aria-labelledby="res-1">
+      <div class="results-grid">
+        <article class="result-card animated-item pop-rotate" tabindex="0" aria-labelledby="res-1">
           <div class="result-icon" aria-hidden="true">
             <div class="pentagon" aria-hidden="true"></div>
           </div>
@@ -101,7 +101,7 @@
           </div>
         </article>
 
-        <article class="result-card" role="listitem" aria-labelledby="res-2">
+        <article class="result-card animated-item pop-rotate" tabindex="0" aria-labelledby="res-2">
           <div class="result-icon" aria-hidden="true">
             <div class="pentagon" aria-hidden="true"></div>
           </div>
@@ -111,7 +111,7 @@
           </div>
         </article>
 
-        <article class="result-card" role="listitem" aria-labelledby="res-3">
+        <article class="result-card animated-item pop-rotate" tabindex="0" aria-labelledby="res-3">
           <div class="result-icon" aria-hidden="true">
             <div class="pentagon" aria-hidden="true"></div>
           </div>
@@ -121,7 +121,7 @@
           </div>
         </article>
 
-        <article class="result-card" role="listitem" aria-labelledby="res-4">
+        <article class="result-card animated-item pop-rotate" tabindex="0" aria-labelledby="res-4">
           <div class="result-icon" aria-hidden="true">
             <div class="pentagon" aria-hidden="true"></div>
           </div>
@@ -133,7 +133,7 @@
       </div>
     </section>
 
-    <!-- CONTACT (kept simple) -->
+    <!-- CONTACT -->
     <section id="contact" class="contact container" aria-labelledby="contact-title">
       <h2 id="contact-title" class="section-title">Contact us</h2>
       <p class="section-intro">Have a question about our products or want to work with us? Fill the short form and we’ll get back to you within 48 hours.</p>
@@ -187,7 +187,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <div class="footer-col footer-brand">
-        <a href="6-index.html" aria-label="Headphones Home">
+        <a href="7-index.html" aria-label="Headphones Home">
           <img src="images/logo_headphones.png" alt="Headphones logo" class="footer-logo">
         </a>
         <p class="footer-copy">Designed for music lovers. Built with care.</p>
@@ -223,7 +223,7 @@
     </div>
 
     <div class="container footer-bottom">
-      <p class="small">&copy; 2025 Francis Kobina Kum — All rights reserved.</p>
+      <p class="small">&copy; 2024 Nana Francis Kobina Kum — All rights reserved.</p>
     </div>
   </footer>
 </body>
