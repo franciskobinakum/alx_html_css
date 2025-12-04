@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Headphones — Hamburger Menu</title>
+
+  <link rel="icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="8-styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="8-index.html" aria-label="Headphones Home">
+        <img src="images/logo_headphones.png" alt="Headphones logo" class="logo">
+      </a>
+
+      <!-- Hamburger button (visible on small screens) -->
+      <button id="hamburger" class="hamburger" aria-controls="main-nav-list" aria-expanded="false" aria-label="Open navigation">
+        <span class="hamburger-box">
+          <span class="hamburger-inner" aria-hidden="true"></span>
+        </span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="main-nav" role="navigation" aria-label="Main Navigation">
+        <ul id="main-nav-list" class="nav-list">
+          <li><a href="#what-we-do">What we do</a></li>
+          <li><a href="#our-results">Our results</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#buy">Buy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN content (kept concise for brevity) -->
+  <main id="main" role="main">
+    <!-- Hero -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">New release</p>
+        <h1 id="hero-title">Immersive sound. Sleek design.</h1>
+        <p class="lead">Experience music exactly as the artist intended — deep bass, crystal highs, and long battery life.</p>
+      </div>
+    </section>
+
+    <!-- What we do (short sample items) -->
+    <section id="what-we-do" class="what-we-do container" aria-labelledby="what-we-do-title">
+      <h2 id="what-we-do-title">What we do</h2>
+      <div class="what-grid">
+        <article class="what-card"> <div class="pentagon small" aria-hidden="true"></div>
+          <div><h3>Studio Quality</h3><p>Precise sound tuning.</p></div>
+        </article>
+
+        <article class="what-card"> <div class="pentagon small" aria-hidden="true"></div>
+          <div><h3>Long Battery</h3><p>All-day playback.</p></div>
+        </article>
+
+        <article class="what-card"> <div class="pentagon small" aria-hidden="true"></div>
+          <div><h3>Elegant Design</h3><p>Comfort-first materials.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Our results (sample) -->
+    <section id="our-results" class="our-results container" aria-labelledby="our-results-title">
+      <h2 id="our-results-title">Our results</h2>
+      <div class="results-grid">
+        <article class="result-card"> <div class="pentagon" aria-hidden="true"></div>
+          <div><div class="result-number">1,200+</div><div class="result-label">Products sold</div></div>
+        </article>
+
+        <article class="result-card"> <div class="pentagon" aria-hidden="true"></div>
+          <div><div class="result-number">98%</div><div class="result-label">Satisfaction</div></div>
+        </article>
+
+        <article class="result-card"> <div class="pentagon" aria-hidden="true"></div>
+          <div><div class="result-number">48h</div><div class="result-label">Battery</div></div>
+        </article>
+
+        <article class="result-card"> <div class="pentagon" aria-hidden="true"></div>
+          <div><div class="result-number">35+</div><div class="result-label">Countries</div></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact (short) -->
+    <section id="contact" class="contact container" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact us</h2>
+      <p class="lead">Say hi — we reply within 48 hours.</p>
+    </section>
+  </main>
+
+  <!-- Footer (small) -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Francis Kobina Kum</p>
+    </div>
+  </footer>
+
+  <script src="8-script.js" defer></script>
+</body>
+</html>

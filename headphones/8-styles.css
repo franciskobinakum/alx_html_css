@@ -1,0 +1,146 @@
+/* 8-styles.css
+   Adds hamburger responsive nav for <=480px
+   Mobile-first. Keeps animations smooth and accessible.
+*/
+
+/* Basic tokens & reset */
+:root{
+  --max-width:1000px;
+  --container-pad:16px;
+  --accent:#FF6565;
+  --text:#162029;
+  --muted:#6b7a86;
+  --bg:#ffffff;
+  --btn-radius:10px;
+  --focus-outline:3px solid rgba(255,101,101,0.18);
+  --nav-bg: #ffffff;
+  --nav-shadow: 0 8px 24px rgba(16,32,56,0.08);
+  --transition-fast: 180ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Minimal reset */
+*{box-sizing:border-box}
+html,body,h1,h2,h3,p,ul,li{margin:0;padding:0}
+ul{list-style:none}
+a{text-decoration:none;color:inherit}
+
+/* Container */
+.container{max-width:var(--max-width);margin:0 auto;padding-left:var(--container-pad);padding-right:var(--container-pad)}
+
+/* Page base */
+body{font-family:"Source Sans Pro",Arial,sans-serif;color:var(--text);background:#f6f7f8;line-height:1.45}
+a:focus,button:focus{outline:var(--focus-outline);outline-offset:4px}
+
+/* Header layout */
+.site-header{background:var(--bg);border-bottom:1px solid #eee;position:sticky;top:0;z-index:60}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.logo{width:110px;display:block}
+
+/* Hamburger button - hidden by default (desktop) */
+.hamburger{
+  display:none;
+  border:0;
+  background:transparent;
+  padding:8px;
+  cursor:pointer;
+  border-radius:8px;
+}
+.hamburger:focus{outline:var(--focus-outline);outline-offset:4px}
+
+/* Hamburger graphic */
+.hamburger-box{width:36px;height:24px;display:inline-block;position:relative}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  display:block;
+  background-color:var(--text);
+  height:3px;
+  border-radius:3px;
+  position:absolute;
+  left:0;
+  right:0;
+  transition: transform var(--transition-fast), opacity var(--transition-fast), top var(--transition-fast), bottom var(--transition-fast);
+}
+.hamburger-inner{ top:50%; transform:translateY(-50%); }
+.hamburger-inner::before{ content:""; top:-9px; }
+.hamburger-inner::after{ content:""; bottom:-9px; }
+
+/* When open, animate into an "X" */
+body.nav-open .hamburger .hamburger-inner { transform: rotate(45deg); top:50%; }
+body.nav-open .hamburger .hamburger-inner::before { transform: rotate(-90deg); top:0; opacity:1; }
+body.nav-open .hamburger .hamburger-inner::after { transform: rotate(-90deg); bottom:0; opacity:1; }
+
+/* Navigation (desktop style) */
+.main-nav { display:block; }
+.nav-list { display:flex; gap:18px; align-items:center; }
+.nav-list a { font-weight:600; padding:6px 8px; border-radius:8px; }
+.nav-list a:hover { color:var(--accent); }
+
+/* Mobile-specific behavior (<=480px) */
+@media (max-width:480px) {
+  /* show hamburger */
+  .hamburger { display:inline-block; }
+
+  /* hide normal nav visuals; the nav will become an overlay panel */
+  .main-nav { position:relative; }
+
+  /* collapsed menu: hidden by transform + opacity for easy animation */
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 12px;
+    width: calc(100vw - 32px);
+    max-width: 320px;
+    background: var(--nav-bg);
+    border-radius: 12px;
+    box-shadow: var(--nav-shadow);
+    padding: 12px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    transform-origin: top right;
+    transform: translateY(-8px) scale(0.98);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 220ms cubic-bezier(.2,.9,.2,1), opacity 220ms ease;
+    z-index:80;
+  }
+
+  /* when open (toggle via JS adding nav-open on body) */
+  body.nav-open .nav-list {
+    transform: translateY(6px) scale(1);
+    opacity:1;
+    pointer-events: auto;
+  }
+
+  /* nav links large & block */
+  .nav-list a { display:block; padding:12px 14px; font-size:1.05rem; background:transparent; border-radius:8px; }
+  .nav-list a:hover { background: rgba(255,101,101,0.04); color:var(--accent); }
+
+  /* ensure header items align: brand left, hamburger right */
+  .header-inner { align-items:center; }
+}
+
+/* prefer reduced motion - avoid transform transitions */
+@media (prefers-reduced-motion: reduce) {
+  .nav-list, .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after { transition: none !important; animation: none !important; }
+}
+
+/* small layout helpers for the rest of the page (kept simple) */
+.hero { padding:28px 0; }
+.what-grid, .results-grid { display:grid; gap:14px; grid-template-columns:1fr; margin-bottom:18px; }
+@media (min-width:640px) {
+  .what-grid { grid-template-columns: repeat(3,1fr); }
+  .results-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (min-width:1024px){
+  .nav-list { display:flex; }
+  .hamburger { display:none; }
+}
+
+/* Keep pentagon CSS small for preview */
+.pentagon { width:56px; height:56px; background: linear-gradient(135deg, rgba(255,101,101,0.14), rgba(255,101,101,0.06)); clip-path: polygon(50% 0%, 92% 35%, 74% 90%, 26% 90%, 8% 35%); border-radius:6px; }
+.pentagon.small { width:40px; height:40px; }
+
+/* general footer */
+.site-footer { padding:18px 0; text-align:center; color:var(--muted); margin-top:36px; }
