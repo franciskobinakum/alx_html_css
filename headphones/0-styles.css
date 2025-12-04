@@ -1,0 +1,169 @@
+/* 0-styles.css
+   Header + Hero for headphones task
+   Mobile-first, simple selectors, variables, small reset
+*/
+
+/* --------- Minimal reset --------- */
+* { box-sizing: border-box; }
+html, body, h1, h2, h3, p, ul, li, figure, figcaption { margin: 0; padding: 0; }
+ul { list-style: none; }
+a { text-decoration: none; color: inherit; }
+
+/* --------- Design tokens --------- */
+:root {
+  --max-width: 1000px;
+  --container-pad: 16px;
+  --accent: #FF6565;       /* link hover / accent color */
+  --bg: #ffffff;
+  --text: #162029;
+  --muted: #6b7a86;
+  --btn-radius: 10px;
+  --focus-outline: 3px solid rgba(255,101,101,0.18);
+  --gap: 20px;
+}
+
+/* --------- Container utility --------- */
+.container {
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-pad);
+  padding-right: var(--container-pad);
+}
+
+/* --------- Base page styling --------- */
+body {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  color: var(--text);
+  background: #f6f7f8;
+  line-height: 1.45;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Accessible focus style for interactive elements */
+a:focus, button:focus {
+  outline: var(--focus-outline);
+  outline-offset: 4px;
+}
+
+/* --------- Header --------- */
+.site-header {
+  background: var(--bg);
+  border-bottom: 1px solid #eee;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  padding: 14px 0;
+}
+
+/* Brand / logo */
+.brand { display: inline-block; }
+.logo { width: 110px; height: auto; display:block; }
+
+/* Navigation */
+.main-nav .nav-list {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.main-nav a {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+.main-nav a:hover, .main-nav a:active {
+  color: var(--accent);
+}
+
+/* --------- Hero (mobile-first) --------- */
+.hero { padding: 28px 0; background: linear-gradient(180deg, #fff, #fbfbfd); }
+.hero-inner { display: flex; flex-direction: column; gap: 22px; align-items: center; }
+
+/* Copy */
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+.hero-copy h1 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.lead {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  text-align: center;
+  max-width: 44ch;
+}
+
+/* Buttons */
+.hero-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
+.btn {
+  display:inline-block;
+  padding: 10px 16px;
+  border-radius: var(--btn-radius);
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Button hover/active rule (opacity) */
+.btn-primary:hover, .btn-primary:active,
+.btn-ghost:hover, .btn-ghost:active { opacity: 0.9; }
+
+/* HERO MEDIA images */
+.hero-media { width:100%; display:flex; justify-content:center; }
+.hero-image { max-width:100%; height:auto; display:block; border-radius:10px; }
+
+/* Default (mobile): show mobile image, hide desktop */
+.hero-desktop { display: none; }
+.hero-mobile  { display: block; }
+
+/* --------- Desktop & wide screens (>= 481px) --------- */
+@media (min-width: 481px) {
+  /* Show nav on larger screens; for very small screens nav can be hidden in earlier tasks */
+  .main-nav { display: block; }
+
+  .hero-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  .hero-copy { flex: 1 1 48%; text-align: left; }
+  .hero-copy h1 { font-size: 2.4rem; }
+  .lead { text-align: left; font-size: 1.05rem; }
+
+  .hero-media { flex: 1 1 48%; display:flex; justify-content:center; align-items:center; }
+
+  /* Swap images for desktop */
+  .hero-desktop { display: block; }
+  .hero-mobile { display: none; }
+}
+
+/* --------- Mobile specific adjustments (<= 480px) --------- */
+@media (max-width: 480px) {
+  /* Optionally hide nav on very small devices to match the challenge requirements */
+  .main-nav { display: none; }
+  .logo { width: 100px; }
+  .hero { padding: 22px 0; }
+  .hero-copy h1 { font-size: 1.4rem; }
+}
